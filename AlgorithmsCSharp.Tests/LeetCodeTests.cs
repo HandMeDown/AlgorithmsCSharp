@@ -23,5 +23,12 @@ namespace AlgorithmsCSharp.Tests
             int[] rec2 = { 1, 0, 2, 1 };
             Assert.IsFalse(LeetCode.IsRectangleOverlap(rec1, rec2));
         }
+
+        [Test]
+        public void FizzBuzz_15_FizzBuzz()
+        {
+            var result = LeetCode.FizzBuzz(15);
+            Assert.AreEqual(result[14].ToString(), "FizzBuzz");
+        }
     }
 }

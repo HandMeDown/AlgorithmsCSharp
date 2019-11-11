@@ -16,5 +16,35 @@ namespace AlgorithmsCSharp
                 rec1[1] >= rec1[3]    //top
                 );
         }
+
+        public static IList<string> FizzBuzz(int n) 
+        {
+            var numberList = new List<string>();
+
+            for (int i = 1; i <= n; i++)
+            {
+                bool multipleOfThree = (i % 3 == 0);
+                bool multipleOfFive = (i % 5 == 0);
+
+                if (multipleOfThree && multipleOfFive)
+                {
+                    numberList.Add("FizzBuzz");
+                }
+                else if (multipleOfThree)
+                {
+                    numberList.Add("Fizz");
+                }
+                else if (multipleOfFive)
+                {
+                    numberList.Add("Buzz");
+                }
+                else
+                {
+                    numberList.Add(i.ToString());
+                }
+            }
+
+            return numberList;
+        }
     }
 }
